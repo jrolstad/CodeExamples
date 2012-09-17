@@ -51,7 +51,7 @@ namespace RepositoryExamples.RavenDb
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="value">Item to save</param>
-        public void Save<T>(T value)
+        public void Save<T>(T value) where T : IEntity
         {
             var session = GetSession();
             session.Store(value);
@@ -63,7 +63,7 @@ namespace RepositoryExamples.RavenDb
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="value">Item to delete</param>
-        public void Delete<T>(T value)
+        public void Delete<T>(T value) where T : IEntity
         {
             var session = GetSession();
             session.Delete(value);
