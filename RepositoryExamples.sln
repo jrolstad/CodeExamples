@@ -1,7 +1,37 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExamples.Core", "RepositoryExamples.Core\RepositoryExamples.Core.csproj", "{A7FB3509-E3B4-47AA-9F94-A695F13E094F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExamples.InMemory", "RepositoryExamples.InMemory\RepositoryExamples.InMemory.csproj", "{1818978F-659C-4BA3-AF93-5BEACE8B1845}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExamples.MongoDb", "RepositoryExamples.MongoDb\RepositoryExamples.MongoDb.csproj", "{DD5DB28F-C89B-4AFE-98B6-73D128AF1EA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExamples.RavenDb", "RepositoryExamples.RavenDb\RepositoryExamples.RavenDb.csproj", "{5E885433-2618-40B3-9881-19D77B48C926}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7FB3509-E3B4-47AA-9F94-A695F13E094F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7FB3509-E3B4-47AA-9F94-A695F13E094F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7FB3509-E3B4-47AA-9F94-A695F13E094F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7FB3509-E3B4-47AA-9F94-A695F13E094F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1818978F-659C-4BA3-AF93-5BEACE8B1845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1818978F-659C-4BA3-AF93-5BEACE8B1845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1818978F-659C-4BA3-AF93-5BEACE8B1845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1818978F-659C-4BA3-AF93-5BEACE8B1845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD5DB28F-C89B-4AFE-98B6-73D128AF1EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD5DB28F-C89B-4AFE-98B6-73D128AF1EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD5DB28F-C89B-4AFE-98B6-73D128AF1EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD5DB28F-C89B-4AFE-98B6-73D128AF1EA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E885433-2618-40B3-9881-19D77B48C926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E885433-2618-40B3-9881-19D77B48C926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E885433-2618-40B3-9881-19D77B48C926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E885433-2618-40B3-9881-19D77B48C926}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
