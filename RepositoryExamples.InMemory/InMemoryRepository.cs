@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using RepositoryExamples.Core;
+using Examples.Core;
+using Examples.Core.Repositories;
 
 namespace RepositoryExamples.InMemory
 {

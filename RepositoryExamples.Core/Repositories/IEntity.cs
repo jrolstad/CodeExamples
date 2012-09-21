@@ -1,4 +1,4 @@
-﻿namespace RepositoryExamples.Core
+﻿namespace Examples.Core.Repositories
 {
     public interface IEntity
     {

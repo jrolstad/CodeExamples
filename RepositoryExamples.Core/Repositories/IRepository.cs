@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace RepositoryExamples.Core
+namespace Examples.Core.Repositories
 {
     /// <summary>
     /// Repository of data

@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Raven.Client;
-using RepositoryExamples.Core;
+using Examples.Core;
+using Examples.Core.Repositories;
 
 namespace RepositoryExamples.RavenDb
 {

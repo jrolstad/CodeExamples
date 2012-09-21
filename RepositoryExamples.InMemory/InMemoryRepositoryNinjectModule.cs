@@ -1,5 +1,6 @@
 ﻿using Ninject.Modules;
-using RepositoryExamples.Core;
+using Examples.Core;
+using Examples.Core.Repositories;
 
 namespace RepositoryExamples.InMemory
 {

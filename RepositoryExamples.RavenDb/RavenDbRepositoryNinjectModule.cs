@@ -1,7 +1,8 @@
 ﻿using Ninject.Modules;
 using Raven.Client;
 using Raven.Client.Document;
-using RepositoryExamples.Core;
+using Examples.Core;
+using Examples.Core.Repositories;
 
 namespace RepositoryExamples.RavenDb
 {

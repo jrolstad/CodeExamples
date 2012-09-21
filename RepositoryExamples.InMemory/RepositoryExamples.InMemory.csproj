@@ -48,9 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RepositoryExamples.Core\RepositoryExamples.Core.csproj">
+    <ProjectReference Include="..\RepositoryExamples.Core\Examples.Core.csproj">
       <Project>{A7FB3509-E3B4-47AA-9F94-A695F13E094F}</Project>
-      <Name>RepositoryExamples.Core</Name>
+      <Name>Examples.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

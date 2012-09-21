@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace RepositoryExamples.Core
+namespace Examples.Core.Repositories
 {
     public interface ISpecification<T>
     {

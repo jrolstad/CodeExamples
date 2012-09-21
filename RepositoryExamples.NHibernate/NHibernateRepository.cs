@@ -1,7 +1,8 @@
 ﻿using System.Linq;
 using NHibernate;
 using NHibernate.Linq;
-using RepositoryExamples.Core;
+using Examples.Core;
+using Examples.Core.Repositories;
 
 namespace RepositoryExamples.NHibernate
 {
