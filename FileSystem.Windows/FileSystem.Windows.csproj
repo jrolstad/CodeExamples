@@ -43,7 +43,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RepositoryExamples.Core\Examples.Core.csproj">
+    <ProjectReference Include="..\Examples.Core\Examples.Core.csproj">
       <Project>{a7fb3509-e3b4-47aa-9f94-a695f13e094f}</Project>
       <Name>Examples.Core</Name>
     </ProjectReference>

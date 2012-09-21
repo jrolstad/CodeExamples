@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.Core", "RepositoryExamples.Core\Examples.Core.csproj", "{A7FB3509-E3B4-47AA-9F94-A695F13E094F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.Core", "Examples.Core\Examples.Core.csproj", "{A7FB3509-E3B4-47AA-9F94-A695F13E094F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExamples.InMemory", "RepositoryExamples.InMemory\RepositoryExamples.InMemory.csproj", "{1818978F-659C-4BA3-AF93-5BEACE8B1845}"
 EndProject
