@@ -4,4 +4,9 @@
     {
         Tout Map(TIn toMap);
     }
+
+    public interface IGenericMapper<in TIn>
+    {
+        Tout Map<Tout>(TIn toMap);
+    }
 }

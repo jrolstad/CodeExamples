@@ -53,6 +53,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Examples.Core\Examples.Core.csproj">
+      <Project>{a7fb3509-e3b4-47aa-9f94-a695f13e094f}</Project>
+      <Name>Examples.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RepositoryExamples.AmazonSimpleDb\RepositoryExamples.AmazonSimpleDb.csproj">
+      <Project>{2fa219af-627d-433d-b05f-e2d15edfb3fe}</Project>
+      <Name>RepositoryExamples.AmazonSimpleDb</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

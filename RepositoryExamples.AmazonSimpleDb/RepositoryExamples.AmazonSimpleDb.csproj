@@ -43,7 +43,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AmazonSimpleDbRepository.cs" />
+    <Compile Include="Attributes\DomainNameAttribute.cs" />
+    <Compile Include="Attributes\DoNotPersistAttribute.cs" />
+    <Compile Include="Mappers\DeleteAttributesRequestMapper.cs" />
+    <Compile Include="Mappers\DomainNameMapper.cs" />
+    <Compile Include="Mappers\ExpressionMapper.cs" />
+    <Compile Include="Mappers\PutAttributesRequestMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queryable\AmazonSimpleDbQueryable.cs" />
+    <Compile Include="Queryable\AmazonSimpleDbQueryableFactory.cs" />
+    <Compile Include="Queryable\AmazonSimpleDbQueryProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Examples.Core\Examples.Core.csproj">
@@ -54,6 +63,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
