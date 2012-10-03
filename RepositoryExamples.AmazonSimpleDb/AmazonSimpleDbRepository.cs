@@ -1,59 +1,48 @@
 ﻿using System.Linq;
-using Amazon.SimpleDB;
-using Amazon.SimpleDB.Model;
-using Examples.Core.Mapping;
 using Examples.Core.Repositories;
-using RepositoryExamples.AmazonSimpleDb.Mappers;
-using RepositoryExamples.AmazonSimpleDb.Queryable;
+
 
 namespace RepositoryExamples.AmazonSimpleDb
 {
     public class AmazonSimpleDbRepository:IRepository
     {
-        private readonly AmazonSimpleDB _client;
-        private readonly IMapper<IEntity, DeleteAttributesRequest> _deleteRequestMapper;
-        private readonly IMapper<IEntity, PutAttributesRequest> _putAttributeRequestMapper;
-        private readonly AmazonSimpleDbQueryableFactory _queryableFactory;
+        private readonly SimpleDbProviderFactory _providerFactory;
 
-        public AmazonSimpleDbRepository(AmazonSimpleDB client,
-            IMapper<IEntity,DeleteAttributesRequest> deleteRequestMapper,
-            IMapper<IEntity,PutAttributesRequest> putAttributeRequestMapper,
-            AmazonSimpleDbQueryableFactory queryableFactory)
+        public AmazonSimpleDbRepository(SimpleDbProviderFactory providerFactory )
         {
-            _client = client;
-            _deleteRequestMapper = deleteRequestMapper;
-            _putAttributeRequestMapper = putAttributeRequestMapper;
-            _queryableFactory = queryableFactory;
+            _providerFactory = providerFactory;
         }
 
-        public IQueryable<T> Find<T>() where T : IEntity
+        public IQueryable<T> Find<T>() where T : IEntity, new()
         {
-            var queryable = _queryableFactory.Build<T>();
+            var provider = _providerFactory.Build<T>();
 
-            return queryable;
+            return provider
+                .Get()
+                .AsQueryable();
 
         }
 
-        public T Get<T>(object key) where T : IEntity
+        public T Get<T>(object key) where T : IEntity, new()
         {
-            var entity = Find<T>()
-                .FirstOrDefault(e => e.Id == key.ToString());
+            var provider = _providerFactory.Build<T>();
 
-            return entity;
+            return provider.Get(key);
+
         }
 
-        public void Save<T>(T value) where T : IEntity
+        public void Save<T>(T value) where T : IEntity, new()
         {
-            var request = _putAttributeRequestMapper.Map(value);
+            var provider = _providerFactory.Build<T>();
 
-            var response = _client.PutAttributes(request);
+            provider.Save(new[]{value});
         }
 
-        public void Delete<T>(T value) where T : IEntity
+        public void Delete<T>(T value) where T : IEntity, new()
         {
-            var request = _deleteRequestMapper.Map(value);
+            var provider = _providerFactory.Build<T>();
 
-            var response = _client.DeleteAttributes(request);
+            provider.Delete(new[] { value.Id });
         }
     }
 }

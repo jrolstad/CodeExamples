@@ -12,7 +12,7 @@ namespace Examples.Core.Repositories
         /// </summary>
         /// <typeparam name="T">Type to search for</typeparam>
         /// <returns></returns>
-        IQueryable<T> Find<T>() where T : IEntity;
+        IQueryable<T> Find<T>() where T : IEntity, new();
 
         /// <summary>
         /// Obtains a single item
@@ -20,20 +20,20 @@ namespace Examples.Core.Repositories
         /// <typeparam name="T">Item to search for</typeparam>
         /// <param name="key">Item key to find</param>
         /// <returns></returns>
-        T Get<T>(object key) where T : IEntity;
+        T Get<T>(object key) where T : IEntity, new();
 
         /// <summary>
         /// Saves a given item
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="value"></param>
-        void Save<T>(T value) where T : IEntity;
+        void Save<T>(T value) where T : IEntity, new();
 
         /// <summary>
         /// Delete a given item
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="value"></param>
-        void Delete<T>(T value) where T : IEntity;
+        void Delete<T>(T value) where T : IEntity, new();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using Couchbase;
 using Couchbase.Configuration;
+using Examples.Core.Repositories;
 using Ninject.Modules;
 
 namespace RepositoryExamples.Couchbase
@@ -19,6 +20,7 @@ namespace RepositoryExamples.Couchbase
                     config.Urls.Add(new Uri("http://localhost:8091/pools"));
                     return new CouchbaseClient(config);
                 });
+            Bind<IRepository>().To<CouchbaseRepository>();
         }
     }
 }

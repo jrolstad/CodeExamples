@@ -21,7 +21,7 @@ namespace RepositoryExamples.InMemory
         /// </summary>
         /// <typeparam name="T">Type to search for</typeparam>
         /// <returns></returns>
-        public IQueryable<T> Find<T>() where T : IEntity
+        public IQueryable<T> Find<T>() where T : IEntity, new()
         {
             return _entities.OfType<T>().ToList().AsQueryable();
         }
@@ -32,7 +32,7 @@ namespace RepositoryExamples.InMemory
         /// <typeparam name="T">Item to search for</typeparam>
         /// <param name="key">Item key to find</param>
         /// <returns></returns>
-        public T Get<T>(object key) where T : IEntity
+        public T Get<T>(object key) where T : IEntity, new()
         {
             return _entities.OfType<T>().SingleOrDefault(e => e.Id == key.ToString());
         }
@@ -42,7 +42,7 @@ namespace RepositoryExamples.InMemory
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="value"></param>
-        public void Save<T>(T value) where T : IEntity
+        public void Save<T>(T value) where T : IEntity, new()
         {
             this.Delete(value);
             _entities.Add(value);
@@ -53,7 +53,7 @@ namespace RepositoryExamples.InMemory
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="value"></param>
-        public void Delete<T>(T value) where T : IEntity
+        public void Delete<T>(T value) where T : IEntity, new()
         {
             _entities.Remove(value);
         }

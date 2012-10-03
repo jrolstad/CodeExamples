@@ -19,10 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExamples.Couchbas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExamples.AmazonSimpleDb", "RepositoryExamples.AmazonSimpleDb\RepositoryExamples.AmazonSimpleDb.csproj", "{2FA219AF-627D-433D-B05F-E2D15EDFB3FE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0E8312D1-6FFF-4932-A7EC-830A85437C65}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExamples.AmazonSimpleDb.Tests", "RepositoryExamples.AmazonSimpleDb.Tests\RepositoryExamples.AmazonSimpleDb.Tests.csproj", "{0B0D976A-C3AF-4231-B761-A47B043DEA35}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,15 +61,8 @@ Global
 		{2FA219AF-627D-433D-B05F-E2D15EDFB3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FA219AF-627D-433D-B05F-E2D15EDFB3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FA219AF-627D-433D-B05F-E2D15EDFB3FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0B0D976A-C3AF-4231-B761-A47B043DEA35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B0D976A-C3AF-4231-B761-A47B043DEA35}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B0D976A-C3AF-4231-B761-A47B043DEA35}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B0D976A-C3AF-4231-B761-A47B043DEA35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{0B0D976A-C3AF-4231-B761-A47B043DEA35} = {0E8312D1-6FFF-4932-A7EC-830A85437C65}
 	EndGlobalSection
 EndGlobal

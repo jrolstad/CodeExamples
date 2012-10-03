@@ -26,7 +26,7 @@ namespace RepositoryExamples.RavenDb
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public IQueryable<T> Find<T>() where T : IEntity
+        public IQueryable<T> Find<T>() where T : IEntity, new()
         {
             var session = GetSession();
 
@@ -39,7 +39,7 @@ namespace RepositoryExamples.RavenDb
         /// <typeparam name="T"></typeparam>
         /// <param name="key">Item id</param>
         /// <returns></returns>
-        public T Get<T>(object key) where T : IEntity
+        public T Get<T>(object key) where T : IEntity, new()
         {
             var session = GetSession();
 
@@ -52,7 +52,7 @@ namespace RepositoryExamples.RavenDb
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="value">Item to save</param>
-        public void Save<T>(T value) where T : IEntity
+        public void Save<T>(T value) where T : IEntity, new()
         {
             var session = GetSession();
             session.Store(value);
@@ -64,7 +64,7 @@ namespace RepositoryExamples.RavenDb
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="value">Item to delete</param>
-        public void Delete<T>(T value) where T : IEntity
+        public void Delete<T>(T value) where T : IEntity, new()
         {
             var session = GetSession();
             session.Delete(value);

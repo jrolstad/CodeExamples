@@ -17,17 +17,17 @@ namespace RepositoryExamples.NHibernate
             _session = session;
         }
 
-        public T Get<T>(object key) where T : IEntity
+        public T Get<T>(object key) where T : IEntity, new()
         {
             return _session.Get<T>(key);
         }
 
-        public void Save<T>(T value) where T : IEntity
+        public void Save<T>(T value) where T : IEntity, new()
         {
             _session.SaveOrUpdate(value);
         }
 
-        public void Delete<T>(T value) where T : IEntity
+        public void Delete<T>(T value) where T : IEntity, new()
         {
             _session.Delete(value);
         }
@@ -37,7 +37,7 @@ namespace RepositoryExamples.NHibernate
             _session.Delete(typeof(T).Name, key);
         }
 
-        public IQueryable<T> Find<T>() where T : IEntity
+        public IQueryable<T> Find<T>() where T : IEntity, new()
         {
             return _session.Query<T>();
         }

@@ -16,14 +16,14 @@ namespace RepositoryExamples.MongoDb
             _database = database;
         }
 
-        public IQueryable<T> Find<T>() where T : IEntity
+        public IQueryable<T> Find<T>() where T : IEntity, new()
         {
             return _database
                 .GetCollection<T>(typeof(T).Name)
                 .AsQueryable<T>();
         }
 
-        public T Get<T>(object key) where T : IEntity
+        public T Get<T>(object key) where T : IEntity, new()
         {
             var identifier = key == null ? null : key.ToString();
 
@@ -31,14 +31,14 @@ namespace RepositoryExamples.MongoDb
                 .FindOneAs<T>(Query.EQ("_id", identifier));
         }
 
-        public void Save<T>(T value) where T : IEntity
+        public void Save<T>(T value) where T : IEntity, new()
         {
             _database
                 .GetCollection<T>(typeof(T).Name)
                 .Save(value);
         }
 
-        public void Delete<T>(T value) where T : IEntity
+        public void Delete<T>(T value) where T : IEntity, new()
         {
             _database
                 .GetCollection<T>(typeof(T).Name)
