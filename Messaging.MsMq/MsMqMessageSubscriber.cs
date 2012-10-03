@@ -30,21 +30,22 @@ namespace Messaging.MsMq
 
         private void PollForMessages(Action<IMessageContext<T>> messageHandler)
         {
-            var messageQueue = new MessageQueue(_uri, QueueAccessMode.Receive) { Formatter = _messageFormatter };
-
-            while (_isSubscribed)
+            using (var messageQueue = new MessageQueue(_uri, QueueAccessMode.Receive) {Formatter = _messageFormatter})
             {
-                try
+                while (_isSubscribed)
                 {
-                    var body = ReadMessageFromQueue(messageQueue);
-                    HandleMessage(messageHandler, body);
-                }
-                catch (MessageQueueException exception)
-                {
-                    // Determine if the exception was due to no message being on the queue
-                    if (exception.MessageQueueErrorCode != MessageQueueErrorCode.IOTimeout)
+                    try
                     {
-                        throw;
+                        var body = ReadMessageFromQueue(messageQueue);
+                        HandleMessage(messageHandler, body);
+                    }
+                    catch (MessageQueueException exception)
+                    {
+                        // Determine if the exception was due to no message being on the queue
+                        if (exception.MessageQueueErrorCode != MessageQueueErrorCode.IOTimeout)
+                        {
+                            throw;
+                        }
                     }
                 }
             }

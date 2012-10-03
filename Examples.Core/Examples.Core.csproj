@@ -47,6 +47,10 @@
     <Compile Include="Commands\Request.cs" />
     <Compile Include="Commands\Response.cs" />
     <Compile Include="Files\IFileSystem.cs" />
+    <Compile Include="Messaging\IMessageContext.cs" />
+    <Compile Include="Messaging\IMessageReceiver.cs" />
+    <Compile Include="Messaging\IMessageSubscriber.cs" />
+    <Compile Include="Messaging\IMessenger.cs" />
     <Compile Include="Repositories\IEntity.cs" />
     <Compile Include="Mapping\IMapper.cs" />
     <Compile Include="Repositories\IRepository.cs" />
