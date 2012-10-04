@@ -21,7 +21,7 @@ namespace Messaging.MsMq
 
         public void Send<T>(T message)
         {
-            using (var messageQueue = new MessageQueue(_uri, QueueAccessMode.Receive) { Formatter = _messageFormatter })
+            using (var messageQueue = new MessageQueue(_uri, QueueAccessMode.Send) { Formatter = _messageFormatter })
             {
                 messageQueue.Send(message);
             }

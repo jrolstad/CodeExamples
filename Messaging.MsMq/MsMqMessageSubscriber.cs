@@ -57,11 +57,11 @@ namespace Messaging.MsMq
             messageHandler(context);
         }
 
-        private static T ReadMessageFromQueue(MessageQueue messageQueue)
+        private T ReadMessageFromQueue(MessageQueue messageQueue)
         {
             var defaultTimeOut = new TimeSpan(0, 0, 0, 1); // Look for a message for 1 second; if none, then timeout
             var message = messageQueue.Receive(defaultTimeOut);
-
+            
             var body = (T) message.Body;
             return body;
         }
