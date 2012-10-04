@@ -21,7 +21,7 @@ namespace Messaging.RabbitMq
 
         public void Reject()
         {
-            _channel.BasicNack(_deliveryTag,false,false);
+            _channel.BasicReject(_deliveryTag,false);
         }
 
         public T Message { get; set; }
