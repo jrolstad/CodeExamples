@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{23FC35AB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.MsMq.Tests", "Messaging.MsMq.Tests\Messaging.MsMq.Tests.csproj", "{F9859BF1-6029-4F79-8964-B95B97F3EDA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.AmazonSqs.Tests", "Messaging.AmazonSqs.Tests\Messaging.AmazonSqs.Tests.csproj", "{453D0CC2-5F05-43C9-A987-64EDCE749D71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{F9859BF1-6029-4F79-8964-B95B97F3EDA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9859BF1-6029-4F79-8964-B95B97F3EDA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9859BF1-6029-4F79-8964-B95B97F3EDA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{453D0CC2-5F05-43C9-A987-64EDCE749D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{453D0CC2-5F05-43C9-A987-64EDCE749D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{453D0CC2-5F05-43C9-A987-64EDCE749D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{453D0CC2-5F05-43C9-A987-64EDCE749D71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,5 +111,6 @@ Global
 		{371D6419-4225-4267-96AD-41DC03597916} = {F7FA301C-69D9-44ED-8425-5CEFF5F904BC}
 		{5F3D33AE-4432-4A4C-9B49-E62F7BC2456E} = {F7FA301C-69D9-44ED-8425-5CEFF5F904BC}
 		{F9859BF1-6029-4F79-8964-B95B97F3EDA5} = {23FC35AB-E6CB-4788-B83E-604ABE439D5C}
+		{453D0CC2-5F05-43C9-A987-64EDCE749D71} = {23FC35AB-E6CB-4788-B83E-604ABE439D5C}
 	EndGlobalSection
 EndGlobal
