@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Formatters\JsonMessageFormatter.cs" />
     <Compile Include="MsMqMessageContext.cs" />
+    <Compile Include="MsMqMessageQueueDetailFactory.cs" />
     <Compile Include="MsMqMessageSubscriber.cs" />
     <Compile Include="MsMqMessagingNinjectModule.cs" />
     <Compile Include="MsMqMessenger.cs" />

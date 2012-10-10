@@ -50,6 +50,7 @@
     <Compile Include="AmazonSqsMessenger.cs" />
     <Compile Include="IMessageFormatter.cs" />
     <Compile Include="JsonMessageFormatter.cs" />
+    <Compile Include="AmazonSqsMessageQueueDetailFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

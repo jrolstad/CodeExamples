@@ -4,16 +4,16 @@ using Examples.Core.Messaging;
 
 namespace Messaging.AmazonSqs
 {
-    public class MessageQueueDetailFactory : IMessageQueueDetailFactory
+    public class AmazonSqsMessageQueueDetailFactory : IMessageQueueDetailFactory
     {
         private readonly AmazonSQSClient _client;
 
-        public MessageQueueDetailFactory(AmazonSQSClient client)
+        public AmazonSqsMessageQueueDetailFactory(AmazonSQSClient client)
         {
             _client = client;
         }
 
-        public MessageQueueDetail Build(string uri)
+        public MessageQueueDetail Build<T>(string uri)
         {
             var request = new GetQueueAttributesRequest().WithQueueUrl(uri);
 

@@ -4,6 +4,6 @@ namespace Examples.Core.Messaging
 {
     public interface IMessageQueueDetailFactory: IDisposable
     {
-        MessageQueueDetail Build(string uri);
+        MessageQueueDetail Build<T>(string uri);
     }
 }
