@@ -48,7 +48,7 @@
     <Compile Include="Commands\Response.cs" />
     <Compile Include="Files\IFileSystem.cs" />
     <Compile Include="Messaging\IMessageContext.cs" />
-    <Compile Include="Messaging\IMessageReceiver.cs" />
+    <Compile Include="Messaging\MessageQueueDetail.cs" />
     <Compile Include="Messaging\IMessageSubscriber.cs" />
     <Compile Include="Messaging\IMessenger.cs" />
     <Compile Include="Repositories\IEntity.cs" />
