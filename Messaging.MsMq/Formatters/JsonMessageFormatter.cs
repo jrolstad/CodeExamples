@@ -4,7 +4,7 @@ using System.Messaging;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace Messaging.MsMq
+namespace Messaging.MsMq.Formatters
 {
     public class JsonMessageFormatter:IMessageFormatter
     {
@@ -28,10 +28,10 @@ namespace Messaging.MsMq
         public object Read(Message message)
         {
             //Obtain the BodyStream for the message.
-            Stream stm = message.BodyStream;
+            var stm = message.BodyStream;
 
             //Create a StreamReader object used for reading from the stream.
-            StreamReader reader = new StreamReader(stm);
+            var reader = new StreamReader(stm);
 
             //Return the string read from the stream.
             //StreamReader.ReadToEnd returns a string.

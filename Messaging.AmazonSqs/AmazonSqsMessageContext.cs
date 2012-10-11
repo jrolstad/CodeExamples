@@ -28,7 +28,7 @@ namespace Messaging.AmazonSqs
 
         public void Reject()
         {
-            
+
         }
 
         public T Message { get; set; }

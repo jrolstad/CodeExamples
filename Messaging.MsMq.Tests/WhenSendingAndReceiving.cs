@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Messaging;
 using System.Threading;
+using Messaging.MsMq.Formatters;
 using Messaging.MsMq.Tests.Messages;
 using NUnit.Framework;
 

@@ -1,5 +1,6 @@
 ﻿using System.Messaging;
 using Examples.Core.Messaging;
+using Messaging.MsMq.Formatters;
 using Ninject.Modules;
 
 namespace Messaging.MsMq
